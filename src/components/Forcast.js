@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import './Forcast.css'
 
 class Forcast extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     oneDay = (dayForcast, i) => {
         const now_temp = (i === 0 ? dayForcast.now_temp : undefined)
