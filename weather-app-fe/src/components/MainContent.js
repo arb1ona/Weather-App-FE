@@ -98,7 +98,7 @@ class MainContent extends React.Component {
         const allComponents = this.renderForcast();
         return (
             <div>
-                <div>
+                <div classname="group1">
                     <input className="text_input" type="text" name="search" placeholder="Search for location" />
                     <button className="button" type="button" name="button" value="getWeather" onClick={this.handleClick}>Get Weather</button>
                 </div>

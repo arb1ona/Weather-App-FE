@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import './Forcast.css'
 
 class Forcast extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     oneDay = (dayForcast, i) => {
         const now_temp = (i === 0 ? dayForcast.now_temp : undefined)
@@ -26,14 +23,17 @@ class Forcast extends Component {
     render() {
         let forcastDays = this.props.forcastDays;
         return (
-            <div className="location-style">
-                <h4>{this.props.city}<br />
-                    <span>Time: {this.props.time}</span>
-                </h4>
-                <ul>
-                    {forcastDays.map((day, index) => this.oneDay(day, index))}
-                </ul>
-            </div>
+            <>
+                <div className="city-time">
+                    <h1>{this.props.city}</h1><br />
+                    <h3>Time: {this.props.time}</h3>
+                </div>
+                <div className="location-style">
+                    <ul>
+                        {forcastDays.map((day, index) => this.oneDay(day, index))}
+                    </ul>
+                </div>
+            </>
         )
     }
 }

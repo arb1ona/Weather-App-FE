@@ -1,8 +1,15 @@
+.city-time{
+  text-align:center;
+}
+
+.city-time.h1{
+   margin: 0;
+}
 .location-style {
     display: flex;
    flex-direction: row;  
    margin-top: 20px;
-   background-color: azure;    
+   background-color: rgb(255, 244, 144);    
 }
 
 .location-style h3, h4 {
